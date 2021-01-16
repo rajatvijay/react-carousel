@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Carousel, CarouselData } from "./Carousel";
 import { CarouselItem } from "./CarouselItem";
-import { complexCarouselData, simpleCarouselItem } from "./data";
+import {
+  complexCarouselData,
+  fewCarouselItem,
+  simpleCarouselItem,
+} from "./data";
 
 const getComplexCarouselData = (): Promise<CarouselData[]> => {
   return new Promise((resolve) => {
@@ -25,6 +29,7 @@ function App() {
   }, []);
   return (
     <div className="application">
+      <h1 style={{ textAlign: "center" }}>React Carousel</h1>
       <h2>Server Carousel</h2>
       {/* TODO: Show a better loader when doing styling */}
       {loading ? <p>Loading...</p> : null}
@@ -37,6 +42,9 @@ function App() {
       <br />
       <h2>Simple Carousel</h2>
       <Carousel ItemComponent={CarouselItem} data={simpleCarouselItem} />
+      <br />
+      <h2>Few Carousel</h2>
+      <Carousel ItemComponent={CarouselItem} data={fewCarouselItem} />
     </div>
   );
 }

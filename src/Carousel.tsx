@@ -46,12 +46,14 @@ const useCarousel = (itemCount: number) => {
     const sequence = [0];
 
     // Full slides scroll
-    for (let i = 1; i < fullSlides; i++) {
-      sequence.push(sequence[sequence.length - 1] - fullSlideDistance);
+    if (fullSlides) {
+      for (let i = 1; i < fullSlides; i++) {
+        sequence.push(sequence[sequence.length - 1] - fullSlideDistance);
+      }
     }
 
     // Remaining slide scroll
-    if (nonFullSlides) {
+    if (fullSlides && nonFullSlides) {
       sequence.push(sequence[sequence.length - 1] - nonFullSlideDistance);
     }
     return sequence;
@@ -69,12 +71,14 @@ const useCarousel = (itemCount: number) => {
     ];
 
     // Full slides scroll
-    for (let i = 1; i < fullSlides; i++) {
-      sequence.push(sequence[sequence.length - 1] + fullSlideDistance);
+    if (fullSlides) {
+      for (let i = 1; i < fullSlides; i++) {
+        sequence.push(sequence[sequence.length - 1] + fullSlideDistance);
+      }
     }
 
     // Remaining slide scroll
-    if (nonFullSlides) {
+    if (fullSlides && nonFullSlides) {
       sequence.push(sequence[sequence.length - 1] + nonFullSlideDistance);
     }
     sequence.reverse();

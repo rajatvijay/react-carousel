@@ -83,3 +83,11 @@ export const simpleCarouselItem = Array(15)
     id: index + 1,
     images: [`https://dummyimage.com/600x400/000/fff&text=${index + 1}`],
   }));
+
+export const fewCarouselItem = Array(2)
+  .fill(1)
+  .map((_, index) => ({
+    title: `${index + 1} Item`,
+    id: index + 1,
+    images: [`https://dummyimage.com/600x400/000/fff&text=${index + 1}`],
+  }));
