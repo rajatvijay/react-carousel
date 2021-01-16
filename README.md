@@ -1,4 +1,4 @@
-## React Carousel
+## Reacty Carousel
 
 Carousel for the first timers!
 
