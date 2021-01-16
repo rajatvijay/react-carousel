@@ -29,7 +29,7 @@ function App() {
   }, []);
   return (
     <div className="application">
-      <h1 style={{ textAlign: "center" }}>React Carousel</h1>
+      <h1 style={{ textAlign: "center" }}>Reacty Carousel</h1>
       <h2>Server Carousel</h2>
       {/* TODO: Show a better loader when doing styling */}
       {loading ? <p>Loading...</p> : null}
